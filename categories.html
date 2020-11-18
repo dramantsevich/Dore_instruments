@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Categories</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="css/categories.css">
+    <link rel="stylesheet" href="css/reset.css">
+</head>
+<body>
+    <div id="btnUp" onclick="toTop()"></div>
+<div id="app">
+    <header>
+        <div class="header-section">
+            <a href="main.html" class="header-logo-link">
+                <p><img src="img/black_logo.svg" height="25px" width="25px" alt="Logo">dore instruments</p>
+            </a>
+            <nav class="nav-links">
+                <ul class="menu">
+                    <li class="menu-item"><a href="categories.html" class="menu-link">categories</a></li>
+                    <li class="menu-item"><a href="discount.html" class="menu-link">discount</a></li>
+                    <li class="menu-item"><a href="feedbacks.html" class="menu-link">feedback</a></li>
+                    <li class="menu-item"><a href="about_us.html" class="menu-link">about us</a></li>
+                    <li><button class="btn btn-primary" id="myBtn" class="btn btn-primary">basket ({{amounts}})</button></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <section class="categories">
+        <h1 class="headline">categories</h1>
+        <div class="navigation">
+            <div id="wind" class="navigation-item">
+                <div class="navigation-item-icon"><img src="img/discount-wind-icon.svg" alt="wind" width="55px" height="55px"></div>
+                <h4 class="navigation-item-headline">wind</h4>
+            </div>
+            <div id="string" class="navigation-item">
+                <div class="navigation-item-icon"><img src="img/discount-string-icon.svg" alt="string" width="35px" height="72px"></div>
+                <h4 class="navigation-item-headline">string</h4>
+            </div>
+            <div id="percussion" class="navigation-item">
+                <div class="navigation-item-icon"><img src="img/discount-percussion-icon.svg" alt="percussion" width="55px" height="50px"></div>
+                <h4 class="navigation-item-headline">percussion</h4>
+            </div>
+            <div id="keyboard" class="navigation-item">
+                <div class="navigation-item-icon"><img src="img/discount-keyboard-icon.svg" alt="keyboard" width="77px" height="38px"></div>
+                <h4 class="navigation-item-headline">keyboard</h4>
+            </div>
+        </div>
+    </section>
+        
+    <section class="products">
+        <div id="block" class="wind">
+            <div class="un wind" v-for="model in sortedList">
+                <img :src="model.img" alt="product-item" width="auto" height="194px"/>
+                <h3>{{model.name}}</h3>
+                <p>{{model.cost}} $</p>
+                <input class="form-control" type="number" value="0" v-model="model.amount"><br>
+                <button class="btn btn-success" v-on:click="Add(model)">To basket</button>
+            </div>
+        </div>
+
+        <div id="block" class="string">
+            <div class="un" v-for="model in sortedList">
+                <img :src="model.img" alt="product-item" width="auto" height="194px"/>
+                <h3>{{model.name}}</h3>
+                <p>{{model.cost}} $</p>
+                <input class="form-control" type="number" value="0" v-model="model.amount"><br>
+                <button class="btn btn-success" v-model="model.amount" v-on:click="Add(model)">To basket</button>
+            </div>
+        </div>
+
+        <div id="block" class="percussion">
+            <div class="un" v-for="model in sortedList">
+                <img :src="model.img" alt="product-item" width="auto" height="194px"/>
+                <h3>{{model.name}}</h3>
+                <p>{{model.cost}} $</p>
+                <input class="form-control" type="number" value="0" v-model="model.amount"><br>
+                <button class="btn btn-success" v-model="model.amount" v-on:click="Add(model)">To basket</button>
+            </div>
+        </div>
+
+        <div id="block" class="keyboard">
+            <div class="un" v-for="model in sortedList">
+                <img :src="model.img" alt="product-item" width="auto" height="194px"/>
+                <h3>{{model.name}}</h3>
+                <p>{{model.cost}} $</p>
+                <input class="form-control" type="number" value="0" v-model="model.amount"><br>
+                <button class="btn btn-success" v-model="model.amount" v-on:click="Add(model)">To basket</button>
+            </div>
+        </div>
+    </section>    
+
+    
+    <section class="footer">
+        <div class="footer-section">
+            <div class="footer-headline">
+                <h3 class="headline-h3">shop</h3>
+            </div>
+            <nav class="nav-links">
+                <ul class="menu">
+                    <li class="menu-item"><a href="main.html" class="menu-link">main-page</a></li>
+                    <li class="menu-item"><a href="categories.html" class="menu-link">categories</a></li>
+                    <li class="menu-item"><a href="discount.html" class="menu-link">discount</a></li>
+                    <li class="menu-item"><a href="feedbacks.html" class="menu-link">feedback</a></li>
+                    <li class="menu-item"><a href="about_us.html" class="menu-link">about us</a></li>
+                </ul>
+            </nav>
+            <div class="social-links">
+                <li class="social-item"><a href="https://www.instagram.com/" class="social-link"><img src="img/instagram-icon.svg" alt="instagram"></a></li>
+                <li class="social-item"><a href="https://facebook.com/" class="social-link"><img src="img/facebook-icon.svg" alt="facebook"></a></li>
+                <li class="social-item"><a href="https://www.linkedin.com/" class="social-link"><img src="img/linkedin-icon.svg" alt="linkedin"></a></li>
+            </div>
+            <div class="copyright">
+                <div class="copyright-p">
+                    <p>Dore instruments - 2020. All rights reserved. Designed by Dzmitry Ramantsevich</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="modal fade" id="myModal" role="dialog">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content" onChange="checkvalue();">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLongTitle">Корзина</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"
+                        v-on:click="AddSS(model)">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div id="object" class="modal-body" v-for="model in models"> 
+                
+                    <div v-if="model.inBasket == true">
+                    <div class="line">  
+                         <span id="name">{{model.name}}</span>
+                        <input class="form-control" type="number" value="0" v-model="model.amount">
+                        <span id="cost">${{+model.cost}}</span>
+                        <button v-on:click="Delete(model)"><img src="img/icon.svg" alt="product-item"></button>
+                     </div>	
+                    </div>
+                </div>
+               <hr size=3px width=500px >
+               <p id="total">Итог ${{totalcost}}</p>
+                <div class="modal-footer">
+                    <button class="btn btn-outline-secondary btn-warning" v-on:click="Pay">Оплатить</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.0"></script>
+    <script src="js/vuejs.js"></script>
+    <script src="js/window.js"></script>
+    <script src="js/btn.js"></script>
+</body>
+</html>
