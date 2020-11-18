@@ -1,0 +1,301 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap");
+
+button {
+    cursor: pointer;
+}
+a{
+    text-decoration: none;
+}
+.main {
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.71) 14.45%, rgba(0, 0, 0, 0.04) 100%),
+        url(../img/backgorund_header_about_us.jpg);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 900px;
+    color: white;
+    header {
+        .header-section {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            max-width: 1160px;
+            margin: 0 auto;
+            padding-top: 57px;
+            .header-logo-link {
+                text-decoration: none;
+                p {
+                    font-family: Roboto;
+                    font-style: normal;
+                    font-weight: 500;
+                    font-size: 18px;
+                    line-height: 21px;
+                    color: white;
+                    text-transform: uppercase;
+                    img {
+                        margin-right: 8px;
+                    }
+                }
+            }
+        }
+        nav {
+            .menu {
+                width: 476px;
+                display: flex;
+                justify-content: space-between;
+                flex-direction: row;
+                .menu-item {
+                    .menu-link {
+                        font-family: Roboto;
+                        font-style: normal;
+                        font-weight: 500;
+                        font-size: 18px;
+                        line-height: 21px;
+                        color: #ffffff;
+                        text-decoration: none;
+                        text-transform: uppercase;
+                    }
+                }
+            }
+        }
+    }
+    .headlines {
+        max-width: 945px;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        padding-top: 340px;
+        margin: 0 auto;
+        .headlines--h1 {
+            text-transform: uppercase;
+            font-family: "Roboto";
+            font-style: normal;
+            font-weight: bold;
+            font-size: 48px;
+            line-height: 56px;
+            letter-spacing: 0.1em;
+        }
+    }
+    .about-us-button{
+        cursor: pointer;
+        max-width: 80px;
+        text-align: center;
+        margin: 330px auto 0 auto;
+        .headlines--p{
+            font-family: Roboto;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 14px;
+            line-height: 16px;
+            text-transform: uppercase;
+            color: #FFFFFF;
+        }
+        .hedlines--button{
+            margin-top: 330px;
+        }
+    }
+}
+
+.founders {
+    display: inline-block;
+    width: 100%;
+    .headlines {
+        margin: 70px auto;
+        text-align: center;
+        width: 555px;
+        .headlines--h1 {
+            font-family: Roboto;
+            font-style: normal;
+            font-weight: bold;
+            font-size: 28px;
+            line-height: 33px;
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+            color: #3A3A3A;
+        }
+        .headlines--p{
+            margin-top: 40px;
+            font-family: Roboto;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 18px;
+            line-height: 150%;
+            color: #3A3A3A;
+        }
+    }
+    .content {
+        max-width: 1160px;
+        margin: 0 auto;
+        margin-bottom: 70px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        text-align: left;
+        .content-item {
+            display: flex;
+            flex-direction: row;
+            .content-item-img {
+                img {
+                    border-radius: 5px;
+                }
+            }
+            .content-headlines {
+                margin-left: 20px;
+                .content-item-headline {
+                    font-family: Roboto;
+                    font-style: normal;
+                    font-weight: 500;
+                    font-size: 18px;
+                    line-height: 32px;
+                    letter-spacing: 0.04em;
+                    color: #3a3a3a;
+                }
+                .content-item-p {
+                    margin-top: 20px;
+                    width: 240px;
+                    font-family: Roboto;
+                    font-style: normal;
+                    font-weight: 300;
+                    font-size: 14px;
+                    line-height: 175.78%;
+                    letter-spacing: 0.04em;
+                    color: #3a3a3a;
+                }
+            }
+        }
+    }
+}
+
+.footer{
+    .footer-section {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background: #f9f9f9;
+        height: 283px;
+        width: 100%;
+        .footer-headline{
+            .headline-h3{
+                margin-top: 70px;
+                width: 75px;
+                font-family: Roboto;
+                font-style: normal;
+                font-weight: bold;
+                font-size: 28px;
+                line-height: 150%;
+                color: #3A3A3A;
+                text-transform: uppercase;
+            }
+        }
+        .nav-links{
+            margin-top: 14px;
+            .menu {
+                width: 445px;
+                display: flex;
+                justify-content: space-between;
+                flex-direction: row;
+                .menu-item {
+                    .menu-link {
+                        font-family: Roboto;
+                        font-style: normal;
+                        font-weight: 500;
+                        font-size: 12px;
+                        line-height: 14px;
+                        color: #3A3A3A;
+                        text-decoration: none;
+                        text-transform: uppercase;
+                    }
+                }
+            }
+        }
+        .social-links{
+            width: 106px;
+            display: flex;
+            justify-content: space-between;
+            flex-direction: row;
+            margin: 40px;
+            flex-wrap: wrap;
+            .social-item{
+                list-style-type: none;
+            }
+        }
+        .copyright{
+            .copyright-p{
+                width: 349px;
+                font-family: Roboto;
+                font-style: normal;
+                font-weight: 300;
+                font-size: 10px;
+                line-height: 150%;
+                color: #3A3A3A;
+            }
+        }
+    }
+}
+
+#btnUp {
+	z-index:9999;
+    position: fixed;
+    bottom: -50px;
+    right: 50px;
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    font-weight: bold;
+    background-color: rgba(220, 220, 220, 0.40);
+    -webkit-box-shadow: 10px 10px 35px 5px rgba(0,0,0,0.4);
+    -moz-box-shadow: 10px 10px 35px 5px rgba(0,0,0,0.4);
+    box-shadow: 0 0 35px 5px rgba(0,0,0,0.4);
+    opacity: 0;
+    transition: all 0.3s ease-in;
+    border-radius: 25px;
+}
+
+#btnUp:after{
+    content: '';
+    width: 8px;
+    height: 8px;
+    border-left: 2px solid #000000;
+    border-top: 2px solid #000000;
+    transform: rotate(45deg);
+    margin: auto;
+    top: 4px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    position: absolute;
+}
+
+@media screen and (max-width: 1200px){
+    .main{
+        header{
+            .header-section{
+                max-width: 800px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 970px){
+    .main{
+        .headlines{
+            .headlines--h1{
+                font-size: 36px;
+            }
+        }
+    }
+
+    .founders{
+        .content{
+            padding-bottom: 70px;
+            .content-item{
+                margin: 0 auto;
+            }
+            .content-item:nth-child(2){
+                margin-top: 30px;
+            }
+        }
+    }
+}
